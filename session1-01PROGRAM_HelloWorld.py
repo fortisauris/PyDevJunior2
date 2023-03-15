@@ -1,0 +1,1 @@
+print("Hello World")  # program vytlaci text to vystupu v konzole
