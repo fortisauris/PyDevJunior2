@@ -33,7 +33,7 @@ zoznam_zoznamov.append(['maslo', 'chlieb'])
 zoznam_zoznamov.append(['kecup', 'paradajky'])
 print(zoznam_zoznamov)
 
-chladnicka = dict()
+chladnicka = dict()   # {'key':'value'}
 chladnicka['policka1'] = ['horcica', 'kecup']
 chladnicka['policka2'] = ['chren', 'majoneza']
 chladnicka['aktualna_teplota'] = 7.05  # stupne celzia

@@ -5,6 +5,8 @@ print(text)
 text = ""
 text += "Toto som teraz vymyslel. teraz"
 print(text)
+
+
 print('teraz' in text)
 vysledok = "teraz" in text
 print(vysledok)
@@ -13,6 +15,7 @@ print(len(text))  # dlzka textoveho retazca - STRINGU
 print(text.upper())
 print(text.lower())
 print(text.islower())
+
 
 print(text.count("teraz"))
 print(text.split('.'))  #   Vystup z tohoto bude ZOZNAM v Python list  []

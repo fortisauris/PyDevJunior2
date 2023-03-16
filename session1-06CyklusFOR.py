@@ -1,5 +1,5 @@
 # FOR cyklus
-for _ in range(0, 10, 2):
+for _ in range(0, 10, 2):  # start, stop a krokovanie
     print("Hello World")
     print(435)
 

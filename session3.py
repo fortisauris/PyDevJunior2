@@ -14,6 +14,7 @@ class Teplomer(object):
         self.teplota = 21  # stupne celsia
 
     def get_teplota(self):  # getter
+        # stiahni_data_z_teplotneho_cidla('TC546')
         return self.teplota
 
     def set_teplota(self, stupne_celsia: float):  # setter
@@ -160,9 +161,9 @@ else:
     print('AHOJ UNIX')
 print(osystem)
 
-print(sys.version_info)
+print(sys.version_info)  # informacia o verzii pythonu
 
-print(random in sys.modules.keys())
+print('random' in sys.modules.keys())
 
 for i in sys.modules.keys():
     if i == 'random':
@@ -170,13 +171,15 @@ for i in sys.modules.keys():
 
 print(sys.path)
 
-print(sys.argv)
-
+print(sys.argv)  # list
 
 #if sys.argv[1] == 'POSLI_EMAIL':
     # print('POSLAL SOM EMAIL NA ADRESU', sys.argv[2])
 
-os.system(command='cls')
+os.system(command='cls')  #
 print(os.listdir())
 os.chdir('C:')
 print(os.listdir())
+
+os.walk()
+
