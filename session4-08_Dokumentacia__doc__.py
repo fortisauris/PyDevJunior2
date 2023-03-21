@@ -5,5 +5,5 @@ def text():
     '''
     return 'COKOLVEK'
 
-print(text.__doc__)
+print(text.__doc__)  # toto nieco robi ale este nevieme co
 print(posunuta_abeceda.__doc__)

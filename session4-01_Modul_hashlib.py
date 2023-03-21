@@ -4,7 +4,7 @@ def hash_it(text: str):
     h = hashlib.md5()
     data = bytes(text, encoding='utf8')  # ascii
     h.update(data)
-    return h.hexdigest()
+    return h.hexdigest()  # hashstring
 
 
 # HLAVNY PROGRAM
