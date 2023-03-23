@@ -3,6 +3,8 @@
 G E N E R A T O R Y
 '''
 
+import random
+
 def vrat_farbu():
     zoznam_farieb = ['cervena', 'oranzova','zelena']
     return zoznam_farieb
@@ -20,7 +22,7 @@ print(next(svetla))
 # print(next(svetla))
 
 svetla = semafor()
-print(svetla.__next__())
+print(svetla.__next__())  # cervena
 
 def generator_zoznamu():
     hodnoty = ['alpha', 'bravo', 'charlie', 'delta']
@@ -40,7 +42,8 @@ def fib(limit):
         yield a
         a, b = b, a + b
 
-x = fib(50)
+x = fib(50)   # startujeme generator
+print(x)
 # print(list(x))
 for _ in x:
     print(next(x))

@@ -1,4 +1,5 @@
 import itertools
+import time
 
 a = iter('ABCD')  # vstavany prikaz pythonu
 print(a)
@@ -25,7 +26,7 @@ print(list(itertools.permutations(a)))
 
 counter = itertools.count()
 while True:
-    c = counter.__next__()
+    c = counter.__next__()  # next(counter)
     print(c)
     time.sleep(.5)
     if c == 6:

@@ -6,4 +6,8 @@ import random
 
 while True:
     print(random.randint(1,6))
-    input('STLAC ENTER')
+    odpoved = input('STLAC ENTER')   # string
+    if odpoved == 'q':
+        break
+
+print('KONIEC PROGRAMU')
