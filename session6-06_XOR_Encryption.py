@@ -2,6 +2,9 @@
 # XOR   ^
 print(1^1)
 print(1^0)
+print(0^0)
+print(0^1)
+print(255^128)
 # bit 1 alebo 0
 # byte 0, 255 - v acsii tabul 65
 
@@ -9,7 +12,7 @@ abeceda = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 def xor_enc(sprava: str, heslo: str) -> str:
     enc_sprava = str()
-    prepared_heslo = (100*heslo)[:len(sprava)]
+    prepared_heslo = (100*heslo)[:len(sprava)]  # nasobenie stringu a orezanie na dlzku spravy
     print(sprava, '\n', prepared_heslo)
     for i in range(0, len(sprava)):
         enc_value = abeceda.index(sprava[i]) ^ abeceda.index(prepared_heslo[i])

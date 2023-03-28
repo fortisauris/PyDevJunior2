@@ -3,7 +3,7 @@
 import hashlib
 import itertools
 
-def hash_it(text: str):
+def hash_it(text: str):  # mixer
     h = hashlib.md5()
     data = bytes(text, encoding='utf8')  # ascii
     h.update(data)
@@ -11,7 +11,7 @@ def hash_it(text: str):
 
 # BruteForce utok - vyskusa vsetky kombinacie
 # Slovnikovy utok -  vyskusa vsetky pravdepodobne slova zo slovnika
-# SOcialne inzinierstvo a OSINT - ziskali sme informacie o Jozefovi z Internetu
+# SOcialne inzinierstvo a OSINT - ziskali sme informacie o Pan Jozefovi z Internetu
 
 Jozef = ["Kapor", 1986, 'Octavia', 'Slovan', 'Maj', 'COrgon', '12','Chorvatsko', 'Anicka', 'Mirka', 'Saris']
 
@@ -23,12 +23,12 @@ def password_cracker(osoba: list):
     return::: result - zoznam kombinacii hesiel
     '''
 
-    dvojice = itertools.combinations(osoba, 2)
-    raw_data = list(dvojice)
+    dvojice = itertools.combinations(osoba, 2)  # mnozinu kombinacii 2 slov z naseho slovnika
+    raw_data = list(dvojice)  # vystup objektu
     print(raw_data)
     print(len(raw_data))
     result = []
-    for cast1, cast2 in raw_data:
+    for cast1, cast2 in raw_data:  # (cast1,cast2)
         result.append(str(cast1)+str(cast2))  # toto nam spoji obe slova
         result.append(str(cast2) + str(cast1))
         result.append(str(cast1) + '1')
@@ -54,3 +54,5 @@ print('HESLO SA NENASLO')
 
 
 # SILNE HESLO NAPRIKLAD: N8vzd7_Sa:Zach0v8VPAM*tI_Stu!kova
+
+e 1

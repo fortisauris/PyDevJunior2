@@ -11,7 +11,7 @@ for i in data:
 print(result)
 
 # funkcionalne programovanie je programovanie pomocou funkcii
-pismena = list(map(lambda x: x.lower(), data))
+pismena = list(map(lambda x: x.lower(), data))  #
 print(pismena)
 
 cisla = [3.5,12.65,34.78,11.87]

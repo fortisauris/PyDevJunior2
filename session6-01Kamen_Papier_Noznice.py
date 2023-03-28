@@ -13,3 +13,5 @@
 
 # TODO - TOTO ROBIT NEMUSITE funkcia na generovanie nahodnej hodnoty
 
+import random
+

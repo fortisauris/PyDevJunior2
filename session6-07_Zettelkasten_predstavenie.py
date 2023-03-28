@@ -1,5 +1,5 @@
 '''
-Z E T T E  L K A S T E N - krabica s kartickami
+Z E T T E L K A S T E N - krabica s kartickami
 
 '''
 

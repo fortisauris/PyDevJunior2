@@ -69,5 +69,5 @@ a = 255
 res = operator.invert(a)  # otocil znamienka
 print(res)
 
-res = operator.contains(mena, 'Frantisek')
-print(res)
+# res = operator.contains(mena, 'Frantisek')  # TODO chyba mena
+# print(res)
