@@ -11,10 +11,10 @@ def generuj_id():
     id = random.randint(0, 10000000)
     povodna_dlzka_ideciek = len(idecka)
     idecka.add(id)
-    if povodna_dlzka_ideciek == len(idecka):
+    if povodna_dlzka_ideciek == len(idecka):  # existuje duplicita
         return None
     else:
-        id = str(id).zfill(7)
+        id = str(id).zfill(7) #0000656
         return id
 
 def nova_karticka():
@@ -25,9 +25,9 @@ def nova_karticka():
     # TODO id cislo nesmie byt None
     while id_cislo is None:
         id_cislo = generuj_id()
-    linky = list()
+    linky = list()  # prepojenia medzi kartickami
     # TODO linky = zadaj_linky()
-    tagy = list()
+    tagy = list()  # mnoziny pomocou tagov
     # TODO tagy = zadaj_tagy()
     obsah_karticky = input('TEXT KARTICKY :')
     baza_dat[id_cislo] = [id_cislo, linky, tagy, obsah_karticky]  # tu sa uklada nova karticka do slovnika

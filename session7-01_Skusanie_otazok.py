@@ -12,7 +12,7 @@ otazky = {'akej farby je nebo':['a-zelene', 'b-modre', 'c-zlte', 'b'],
 # HLAVNY PROGRAM
 
 kluce = list(otazky.keys())  # vytahujeme kluce rozumej otazky zo slovnika
-while True:
+while True:  # nekonecny cyklus
     otazka = random.choice(kluce)  # vyberame nahodny kluc
     print(otazka)  # tlacime otazku
 

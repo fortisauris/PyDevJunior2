@@ -3,7 +3,7 @@
 a = [12, True, 'Jolana', 564.564]
 b = [14, False, 'Jozef', 65.76]
 
-import csv
+import csv  # comma separated values
 
 # zapis do csv suboru
 with open('data.csv', mode='w', newline='') as csvfile:
@@ -13,7 +13,7 @@ with open('data.csv', mode='w', newline='') as csvfile:
     datawriter.writerow(b)
     print('DONE')
 
-with open('data.csv', mode='r', newline='') as csvfile:
+with open('data.csv', mode='r', newline='') as csvfile:  # read
     datareader = csv.reader(csvfile, delimiter=' ')
     print(type(datareader))
     for riadok in datareader:

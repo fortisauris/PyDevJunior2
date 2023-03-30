@@ -1,7 +1,7 @@
 
 import os
 
-# TPM - Trusted Platform Module -> chip vo vasom pocitaci na ulozenie kryptografickych klucov a algoritmov
+# TPM - Trusted Platform Module -> chip vo vasom pocitaci na ulozenie kryptografickych klucov a algoritmo
 
 print(os.urandom(12))
 abeceda = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -31,3 +31,15 @@ print(vernam_enc('BRYNDZAZOPATDRAZELA'))  # volame funkciu
 
 # TODO spravit Decrypt
 # TODO BruteForce Vernam
+
+def vernam_dec(kluc: list, enc_sprava: list):  # rozsifrovanie
+    dec_sprava = str()  # prazdna sprava
+    for i in range(0, len(enc_sprava)):  # cyk
+        dec_znak = kluc[i] ^ enc_sprava[i]
+        dec_sprava += abeceda[dec_znak]
+    return dec_sprava
+
+kluc = [2, 226, 70, 239, 207, 190, 38, 46, 214, 183, 121, 242, 117, 246, 94, 14, 114, 122, 252]
+enc_sprava = [3, 243, 94, 226, 204, 167, 38, 55, 216, 184, 121, 225, 118, 231, 94, 23, 118, 113, 252]
+print(vernam_dec(kluc=kluc, enc_sprava=enc_sprava))
+
