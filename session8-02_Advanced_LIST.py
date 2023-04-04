@@ -5,18 +5,18 @@ ADVANCED LIST
 a= list()
 print(type(a))
 
-a.append('Jergus')
+a.append('Jergus')  # pridaj na koniec
 print(a)
 
 print(dir(a))
 
-a.extend(['Maros', 'Roman'])
+a.extend(['Maros', 'Roman'])  # pridaj zoznam do zoznamu
 print(a)
 
-a.insert(2, 'Yveta')
+a.insert(2, 'Yveta')  # vlozime na index 2 Yvetu
 print(a)
 
-a.remove('Maros')
+a.remove('Maros')  # odstranime Marosa
 print(a)
 
 if "Andrej" in a:  # podmienka nebola splnena
@@ -24,16 +24,16 @@ if "Andrej" in a:  # podmienka nebola splnena
 print(a)
 
 # while True:
-meno = a.pop(1)
+meno = a.pop(1)  # vytiahni a vymaz zo zoznamu
 print(meno, a)
 
-a.clear()
-# del a
+a.clear()  # vymaze zoznam
+# del a  # vymaze objekt
 print(a)
 
 
 fruits = ['Banany', 'Jablka', 'Ananas', 'Kiwi', 'Jablka']
-print(fruits.index("Jablka", 0, len(fruits)))  #
+print(fruits.index("Jablka", 0, len(fruits)))  # clen zoznamu, zaciatok kde ma hladat a koniec
 if 'Srobovak' in fruits:
     print(fruits.index("Srobovak", 0, len(fruits)))  #
 else:

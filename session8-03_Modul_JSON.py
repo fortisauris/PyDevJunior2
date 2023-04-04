@@ -5,7 +5,7 @@ JSON -
 
 import json
 
-a = ['Data', {'World': 56746, 'Amerika':6547, 'Europa':[234,654,765]}]
+a = ['Data', {'World': 56746, 'Amerika': 6547, 'Europa': [234,654,765]}]
 vystup = json.dumps(a)
 print(vystup)
 
