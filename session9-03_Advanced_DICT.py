@@ -13,7 +13,7 @@ b = {'one':1,
      }
 
 print(b)
-print(type(b['one']))
+print(type(b['one']))  # integer
 
 c = dict(zip(['one', 'two', 'three'], [1,2,3]))
 print(c)
@@ -34,7 +34,7 @@ print(c)
 print('one' in c)
 print('Srobovak' not in c)
 
-a = iter(c)
+a = iter(c)  # iterator
 for i in range(0, len(c)):
     key = next(a)
     print(i, key, c[key])
@@ -48,18 +48,18 @@ print(c)
 vystup = c.fromkeys(c.keys())
 print(vystup)
 
-print(c['one'])
-print(c.get('one'))
+print(c['one'])  # vypisat clena slovnika podla klucoveho slova
+print(c.get('one'))  # -- II --
 print(c)
 
 print(c.keys())
 print(c.values())
 print(c.items())
 
-for i in c.items():
+for i in c.items(): # vytahujeme udaje a kluce pomocou items()
     print(i[0], i[1])
 
-c.pop('one')
+c.pop('one')  #
 print(c)
 
 val = c.popitem()
