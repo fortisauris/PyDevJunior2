@@ -1,6 +1,6 @@
 '''
 sort, sorted  uz pozname
-SORTOVANIE BBBLE SORT
+SORTOVANIE BUBBLE SORT
 '''
 
 def bubble_sort(zoznam: list):

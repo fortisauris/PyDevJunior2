@@ -3,7 +3,10 @@
 # spravime si prazdny dict.
 slovnik = dict()
 
-def pridaj_slovicko(slovnik: dict):
+def pridaj_slovicko(slovnik: dict) -> dict:
+    '''
+
+    '''
     # 1 budeme pridavat klucove slovo
     kluc = input('ZADAJ KLUC')
     # 2hodnotu v podobe string
@@ -12,7 +15,7 @@ def pridaj_slovicko(slovnik: dict):
         quit()
     hodnota = input('ZADAJ STRING')
     # vlozit do slovnika
-    slovnik[kluc] = hodnota
+    slovnik[kluc] = hodnota  # zavolam slovnik a pridam klucove slovo a jeho obsah
     # zavolam slovnik, urcim klucove slovo = hodnota
     print(slovnik)
     # vyprintovat hodnoty -

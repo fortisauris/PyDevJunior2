@@ -31,8 +31,8 @@ class Baterka(object):
 obj = Baterka()  # tu vznika objekt # tu sa zrealizuje nas plan
 print(obj.model)
 print(obj.kapacity)
-print(obj.vytlac_kapacitu)
+print(obj.vytlac_kapacitu)  # volame ju ako triednu premennu
 print(obj._znacka)
 obj._znacka = "DURACELL"
 print(obj._znacka)   # premenna je oznacena ako chranena a nemalo by sa k nej pristupovat mimo kodu triedy
-print(obj.__znacka)  # vyhodi attributeError
+# print(obj.__znacka)  # vyhodi attributeError

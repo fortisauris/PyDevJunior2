@@ -30,12 +30,12 @@ import socketserver  # adresy IP  a PORTU 65535  - 80 http
 PORT = 8000  # port sme nastavili na 8000 lebo tam pocitac nic nepouziva
 Handler = http.server.SimpleHTTPRequestHandler  # handler je nieco ako recepcia, prijima poziadavky od hosti
 
-with socketserver.TCPServer(('', PORT), Handler) as httpd:  # TCP Protokol -
+with socketserver.TCPServer(('', PORT), Handler) as httpd:  # TCP Protokol - AUtorizovany   UDP - Neautorizovany
     print('servujem na porte: ', PORT)
-    httpd.serve_forever()
+    httpd.serve_forever()   # d - demon
 
 '''
-TREBA OTVORIT BROWSER a ZADAT ADRESU http://127.0.0.1:8000
+TREBA OTVORIT BROWSER a ZADAT ADRESU http://127.0.0.1:8000   localhost:8000
 '''
 
 # HTML CSS lokalne skripty - Bootstrap ak je lokalne stiahnuty v css
