@@ -1,4 +1,4 @@
-def hello(func):
+def hello(func):  # toto je nas dekorator
 
     def wrapper():  # toto jhe vnutorna funkcia
         print('UROB VOLACO PRED VLOZENO FUNKCIOU')  # skontroloval nieco

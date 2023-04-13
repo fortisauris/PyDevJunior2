@@ -7,7 +7,7 @@ def plugboard(mods: dict, key):
     defaultne_nastavenie = dict(zip(abeceda, abeceda))
     print(defaultne_nastavenie)
 
-    defaultne_nastavenie.update(mods)
+    defaultne_nastavenie.update(mods)   # pridavame modifikacie do defaultnej abecedy
     print(defaultne_nastavenie)
     return defaultne_nastavenie[key]
 

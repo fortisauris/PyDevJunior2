@@ -26,10 +26,10 @@ def je_cele_cislo(n):
 
 print(sucet(5,0))
 print(urob_delenie(5,0))
-'''
+
 for i in range(25):
-    # if i == 20:
-        # raise ValueError
+    if i == 20:
+        i = None
     print(i)
-'''
+
 # TODO Prestavka do 19:50

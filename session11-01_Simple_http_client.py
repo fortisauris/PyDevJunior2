@@ -10,9 +10,9 @@ con = http.client.HTTPSConnection('fortisauris.com')  # rozdiel medzi HTTP - HTT
 # zaregistovat tatrabanka.sk   CA
 # zaregistorvat ta.trabanka.sk  CA  https
 
-con.request('GET', '/')
+con.request('GET', '/')  # defaultne je nastaveny index.html alebo main.html
 r1 = con.getresponse()
-headers = r1.getheaders()
+headers = r1.getheaders()  # hlavicka dokumentu
 print(r1.status, r1.reason)
 print('HEADERS:\n', headers)
 

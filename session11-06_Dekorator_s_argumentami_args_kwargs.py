@@ -13,7 +13,7 @@ def hello(func):
     return wrapper
 
 @hello
-def pozdrav(meno: str, pocet: int):
+def pozdrav(meno: str, pocet: int):  # povinne argumenty a kvaziargumenty
     for i in range(0,pocet):
         print('AHOJ', meno)
 
