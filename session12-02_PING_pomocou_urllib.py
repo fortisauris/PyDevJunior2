@@ -1,4 +1,4 @@
-import urllib.request
+import urllib.request  # funguje len na http request
 import time
 
 

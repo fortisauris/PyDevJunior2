@@ -19,7 +19,7 @@ def najkratsia_cesta(graph: dict, mesto1: str, mesto2: str):
 
     predchadzajuce_mesto = {mesto1}
     if mesto1 == mesto2:
-        return cesta_zoznam[0]
+        return cesta_zoznam[0]  # keby sme isli z bodu A do bodu A
 
     while cesta_index < len(cesta_zoznam):
         aktualna_cesta = cesta_zoznam[cesta_index]
