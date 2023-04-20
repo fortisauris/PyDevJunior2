@@ -8,7 +8,7 @@ G I T   - V E R S I O N   C O N T R O L
 
 
 # NAKLONOVANIE REPOZITARA
-''' git clone https://github.com/fortisauris/PyDevJR_Course.git  '''
+''' git clone https://github.com/fortisauris/PyDevJunior2.git  '''
 # ZISTENIE STAVU
 ''' git status  '''
 # STIAHNUTIE AKTUALNEHO STAVU S GITHUBU

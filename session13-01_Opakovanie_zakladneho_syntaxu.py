@@ -3,7 +3,7 @@ OPAKOVANIE ZAKLADNEHO SYNTAXU
 '''
 
 # PREMENNE alebo VARIABLES
-
+# TOTO JE MALA ZMENA V TOMTO SUBORE
 a = int() # cele cislo
 a = 58473756
 print(type(a))
@@ -80,6 +80,7 @@ class Ponozka(object):
         print('ZANIKLA NOVA PONOZKA')
 
     #def __repr__(self):
+    #    print('JA SOM TVOJA PRAVA PONOZKA')
 
     def status_setter(self, status):
         self.status = status
@@ -87,7 +88,10 @@ class Ponozka(object):
 obj = Ponozka()
 print(obj.status)
 obj.status_setter(status='spinava')
+print(obj.__repr__())
 print(obj.status)
+obj2 = Ponozka()
+print(obj2.__repr__())
 del obj
 
 # input()
