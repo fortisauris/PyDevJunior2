@@ -4,7 +4,7 @@
 
 # OPEN DATA - Iniciativa na publikovanie dat miest, organizacii na volne analyzovanie
 
-
+#  TODO Doplna stranky na opendata.Kosice a opendata.Bratislava
 '''
 PANDAS - softver na pracu s datami pre python
 '''
