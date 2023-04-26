@@ -1,7 +1,7 @@
 while True:
     try:
         print('VOLACO')
-    except KeyboardInterrupt:
+    except KeyboardInterrupt:  # Control C
         cmd = input('ZADAJ PRIKAZ PROGRAMU :')
         if cmd == 'q':
             quit()
