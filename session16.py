@@ -10,9 +10,9 @@
 
 # zavolam generator a hodi mi dalsi mesiac v poradi
 
-iniciovat generator
+# iniciovat generator
 
-vytahovat hodnoty
+# vytahovat hodnoty
 
 
 
