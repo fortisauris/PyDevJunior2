@@ -31,12 +31,12 @@ if __name__ == '__main__':
         for col in range(1,15):
             _ = ws3.cell(column=col, row=row, value=random.randint(0,9999))
     print(ws3['B3'].value)
-    print(ws3['B3'].number_format)
+    print(ws3['B3'].number_format)  # Generak
     ws3.cell(row=3, column=2, value='SIGNAL LOST')
 
-    alphabet = ['A','B','C','D']
+    alphabet = ['A','B','C','D']  # list
     for col in alphabet:
-        cell = col+'15'
+        cell = col+'15' # string reprezentujuci bunku
         formula = '=SUM(%s1:%s14)' % (col, col)
         ws3[cell] = formula
 
@@ -45,6 +45,8 @@ if __name__ == '__main__':
 
     ws3.insert_rows(5, 2)  # kde a kolko riadkov
     ws3.insert_cols(5, 2)  # kde a kolko riadkov
+
+
 
 
     # UKLADANIE DOKUMENTU

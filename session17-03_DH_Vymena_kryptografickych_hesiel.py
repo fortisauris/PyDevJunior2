@@ -23,7 +23,7 @@ RobertoveTajomstvo = 909432
 
 # Server
 g = 95843854038584432   # nahodne cislo s vysokou entropia
-n = 911
+n = 911 # prvocislo
 
 A_posiela = (g ** AlicineTajomstvo) % n
 print('ALICA POSIELA :', A_posiela)
