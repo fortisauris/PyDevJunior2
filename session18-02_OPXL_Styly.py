@@ -111,6 +111,7 @@ for idx, col in enumerate(ws1.columns,1):
     print(get_column_letter(idx))
     ws1.column_dimensions[get_column_letter(idx)].auto_size = True
 
+# OCHRANA PROTI ZAPISU
 ws2.protection.sheet = True
 ws2.protection.enable()
 ws2.protection.password = 'BRYNDZOVEHALUSKY'
