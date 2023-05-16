@@ -2,7 +2,7 @@
 from flask import Flask, render_template, abort, redirect, request
 import datetime
 
-
+BUFFER = list()  # tu sa budu ukladat data zaslane uzivatelom pomocou requestu POST
 app = Flask(__name__)
 
 # ERROR HANDLERS
@@ -49,6 +49,19 @@ def spravy(index):
 def kurz():
     kurz = [12, 34,23,78,45, -5,-76,15,34, 89]
     return render_template('kurzkk.html', kurzy=kurz)
+
+@app.route('/form', methods=['GET', 'POST'])
+def form():
+    print(request)
+    if request.method == 'POST':
+        user = request.form.get('user')
+        pwd = request.form.get('pwd')
+        print(user, pwd)
+        BUFFER.append((user,pwd))  # pridavame tuple
+        app.logger.info('USPECH - vysledok formulara bol ulozeny do BUFFERU')
+
+
+    return render_template('form.html', form=form)
 
 
 if __name__ == '__main__':
