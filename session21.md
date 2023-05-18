@@ -6,7 +6,7 @@
 Súčasťou POST requestu je tzv. PAYLOAD, ktorý obsahuje dáta užívateľa
 smerujúce na náš Server.
 
-Vňčšinou sa posielajú na server pomocou formulára v HTML
+Väčšinou sa posielajú na server pomocou formulára v HTML
 
 Prvý formulár sme vytvorili pomocou HTML tagov, input a label
 

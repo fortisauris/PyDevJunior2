@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <style>
+      body  {
+      background-color: black;
+      color: lawngreen;
+      }
+      .content  {
+      color: red;
+      }
+    </style>
+</head>
+<body>
+      <h1>Index NIcoho</h1>
+      <p>TOTO JE NASA DRUHA WEBFLASA</p>
+      <div class="content">
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+        {%if messages %}
+        {% for msg in messages %}
+            <h1>    {{ msg }}    </h1>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+{% endblock %}
+</div>
+
+</body>
+</html>

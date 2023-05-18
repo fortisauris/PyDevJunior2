@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <style>
+      body  {
+      background-color: black;
+      color: lawngreen;
+      }
+    </style>
+</head>
+<body>
+      <ol>
+          {% for entry in entries %}
+          <li> {{ entry }} </li>
+          {% endfor %}
+      </ol>
+
+</body>
+</html>

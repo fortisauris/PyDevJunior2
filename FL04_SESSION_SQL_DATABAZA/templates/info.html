@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INFO</title>
+</head>
+<body>
+  {% block content %}
+  <div class="container">
+    <h2>VITAJTE NA NASOM FLASKOVOM SERVERI</h2>
+    <br>
+    <form action="" method="post">
+      {{ form.csrf_token }}
+      {{ form.info.label }}
+      {{ form.info }}
+      {{ form.submit }}
+
+    </form>
+    {% if form.errors %}
+    {{ form.errors }}
+    {% endif %}
+  </div>
+{% endblock %}
+</body>
+</html>
