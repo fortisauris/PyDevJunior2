@@ -5,18 +5,18 @@ from flask_wtf import FlaskForm, csrf
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
 from flask_session import Session
-import sqlite3
+import sqlite3  # importujeme priopojenie do databazy sqlite3
 # APP CONTEXT
-app= Flask(__name__)
+app = Flask(__name__)
 app.config['SECRET_KEY'] = os.urandom(32)
 app.config['CSRF_ENABLED'] = True
 
 app.config['SESSION_TYPE'] = 'filesystem'
 app.config['SESSION_PERMANENT'] = False
-Session(app)
+Session(app)   # tu vznika velka session
 
 # TU SA NAM UKLADAJU DATA
-info_list = ['test1', 'test2', 'test3']
+info_list = ['test1', 'test2', 'test3']  # spomienka na app1
 
 #FORMULAR
 class MojFormular(FlaskForm):
@@ -25,14 +25,14 @@ class MojFormular(FlaskForm):
 
 DATABASE = 'appdb.db'
 
-def add_record(info):
-    with sqlite3.connect(DATABASE) as db:
-        cur = db.cursor()
+def add_record(info):  #
+    with sqlite3.connect(DATABASE) as db:  # pripojime sa
+        cur = db.cursor()  #
 
-        sql_cmd = ' INSERT INTO info VALUES(?,?) '
-        data = (1, info)
-        cur.execute(sql_cmd, data)
-        db.commit()
+        sql_cmd = ' INSERT INTO info VALUES(?,?) '  # prikaz SQL
+        data = (1, info)  # tu si pripravime data
+        cur.execute(sql_cmd, data)   # vykoname prikaz
+        db.commit()  # ulozime
         return True
 
 
@@ -82,7 +82,7 @@ def info():
             print(request.form.get('info'))
             session['info'] = request.form.get('info')
             # FIRST
-            #with open(file='session_info.json', mode='a', encoding='utf8') as f:
+            #with open(file='session_info.json', mode='a', encoding='utf8') as f:  # <- Tu to ukladamae do jsonu
             #    json.dump(fp=f, obj=session, indent=4)
             add_record(session['info'])
             app.logger.info('INFO ULOZENA DO SESSION')

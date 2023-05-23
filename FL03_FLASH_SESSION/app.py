@@ -51,17 +51,17 @@ def delsession():
 
 @app.route('/info', methods=['GET', 'POST'])
 def info():
-    form = MojFormular()
-    app.logger.debug('FORMULAR BOL VYTVORENY')
-    if request.method == 'POST':
+    form = MojFormular()  # ti generujeme nas formular
+    app.logger.debug('FORMULAR BOL VYTVORENY')  # piseme loggeru
+    if request.method == 'POST':  # iba ked je request POST
         csrf.generate_csrf()
-        app.logger.debug('SPRAVA PRISLA')
+        app.logger.debug('SPRAVA PRISLA')   # sprava z formularu prisla
         #if request.form.get('info') != '':
         if form.validate():
             print(request.form.get('info'))
             session['info'] = request.form.get('info')
             app.logger.info('INFO ULOZENA DO SESSION')
-            return redirect(f'/submit')
+            return redirect(f'/submit')  # podakovanie
         else:
             app.logger.info('INFORMACIA NEBOLA ULOZENA')
 

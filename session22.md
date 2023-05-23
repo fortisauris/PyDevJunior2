@@ -15,7 +15,7 @@ našimi užívateľmi.
 
 1. ukladať veci zo session do súboru napr json (pokiaľ bude informácii naraz veľa server ich nebude stíhať zapisovať a čítať)
 2. ukladať informácie do databázy sqlite3, ktorá má databázu uloženú v jednom súbore (jednoduché a lepšie riešenie)
-3. Použijeme databáyový server SQL alebo NonSQL databázy (Toto je preferované a profesionálne riešenie umožňujúce zapisovať a čítať naraz množsstvu užívateľom)
+3. Použijeme databázový server SQL alebo NonSQL databázy (Toto je preferované a profesionálne riešenie umožňujúce zapisovať a čítať naraz množsstvu užívateľom)
 
 !!! POZOR: Inštalovanie Databázového servera na Windows nie je optimálnym riešením.
 
