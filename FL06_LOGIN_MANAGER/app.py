@@ -13,14 +13,14 @@ app = Flask(__name__)
 
 app.config['SECRET_KEY'] = os.urandom(32)
 app.config['CSRF_ENABLED'] = True   # Cross Site Request Forgery
-app.config['SECURITY_PASSWORD_HASH'] = 'bcrypt'
-app.config['SECURITY_PASSWORD_SALT'] = b'$2b$12$wqKlYjmOfXPghx3FuC3Pu.'
+app.config['SECURITY_PASSWORD_HASH'] = 'bcrypt'  # hash
+app.config['SECURITY_PASSWORD_SALT'] = b'$2b$12$wqKlYjmOfXPghx3FuC3Pu.'  # ochrana proti prelomeniu hesla cez hash
 
 
 login_manager = LoginManager()
 login_manager.init_app(app)
 
-# MOCK
+# MOCK FALOSNA DATABAZA -
 users = {'andrej@gmail.com':{'password':'halabala'}, 'filip@gmail.com':{'password':'netusim'}}  # tu musia byt nasolene hashe
 
 
@@ -30,20 +30,20 @@ class MojFormular(FlaskForm):
     pwd = PasswordField('Password')
     submit = SubmitField('Submit')
 
-class User(UserMixin):
+class User(UserMixin):  # staci nam to co zdedi po UserMixin
     pass
 
 # LOGIN MANAGER LOADER
 @login_manager.user_loader
-def user_loader(email):
+def user_loader(email):  # toto nahrava z databazy
     if email not in users:
         return
-    user = User()
-    user.id = email
+    user = User()  # vytvor objekt User
+    user.id = email  # id email
     return user
 
 @login_manager.request_loader
-def request_loader(request):
+def request_loader(request):  # toto nam nahrava z requestu
     email = request.form.get('email')
     if email not in users:
         return
@@ -57,7 +57,7 @@ def login():
         return render_template('login.html')
 
     email = request.form['email']
-    print(request.form)
+    print(request.form)  # https  # github pages
     if email in users and request.form['password'] == users[email]['password']:
         user = User()
         user.id = email
